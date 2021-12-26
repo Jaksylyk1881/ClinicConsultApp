@@ -1,4 +1,4 @@
-package com.example.clinicconsultapp;
+package com.example.clinicconsultapp.autorithation;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
+import com.example.clinicconsultapp.R;
 import com.example.clinicconsultapp.data.MainViewModel;
 import com.example.clinicconsultapp.data.User;
 

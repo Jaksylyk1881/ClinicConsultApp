@@ -11,4 +11,6 @@
     <color name="stroke_Green_color">#7CE0C8</color>
     <color name="grey">#C4C4C4</color>
     <color name="search_box_color">#3D737978</color>
+    <color name="read_more_button">#0FD4E0</color>
+    <color name="background_new_entry">#EDEEF0</color>
 </resources>

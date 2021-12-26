@@ -10,8 +10,9 @@ public class Doctor implements Serializable {
     private String description;
     private int rating;
     private int category;
+    private String cabinet;
 
-    public Doctor(int doctorId, String doctorName, String doctorType, int doctorImage, String description, int rating, int category) {
+    public Doctor(int doctorId, String doctorName, String doctorType, int doctorImage, String description, int rating, int category,String cabinet) {
         this.doctorId = doctorId;
         this.doctorName = doctorName;
         this.doctorType = doctorType;
@@ -19,6 +20,15 @@ public class Doctor implements Serializable {
         this.description = description;
         this.rating = rating;
         this.category = category;
+        this.cabinet = cabinet;
+    }
+
+    public String getCabinet() {
+        return cabinet;
+    }
+
+    public void setCabinet(String cabinet) {
+        this.cabinet = cabinet;
     }
 
     public int getCategory() {

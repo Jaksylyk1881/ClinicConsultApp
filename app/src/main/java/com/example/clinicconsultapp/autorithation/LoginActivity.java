@@ -1,4 +1,4 @@
-package com.example.clinicconsultapp;
+package com.example.clinicconsultapp.autorithation;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -11,11 +11,14 @@ import androidx.lifecycle.ViewModelProviders;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
+import com.example.clinicconsultapp.MainActivity;
+import com.example.clinicconsultapp.R;
 import com.example.clinicconsultapp.data.MainViewModel;
 import com.example.clinicconsultapp.data.User;
 
@@ -67,6 +70,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onClickSignIn(View view) {
+
         if (!validateEmail() | !validatePassword()){
             return;
         }
@@ -93,8 +97,14 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             User user = viewModel.getUserByEmail(email);
             if (password.equals(user.getPassword())){
-                Intent intent = new Intent(this,MainActivity.class);
-                intent.putExtra("loggedUser",user);
+                SharedPreferences sharedPreferences = getSharedPreferences("logged",0);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                Intent intent = new Intent(this, MainActivity.class);
+                editor.putInt("userId",user.getId());
+                editor.putString("userName",user.getFullName());
+                editor.putString("userEmail",user.getEmail());
+                editor.putString("userPassword",user.getPassword());
+                editor.commit();
                 startActivity(intent);
                 overridePendingTransition(R.anim.animation2,R.anim.animation1);
             }else {

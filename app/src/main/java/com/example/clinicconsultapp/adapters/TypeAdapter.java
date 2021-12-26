@@ -1,21 +1,22 @@
-package com.example.clinicconsultapp;
+package com.example.clinicconsultapp.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.clinicconsultapp.R;
 import com.example.clinicconsultapp.data.Doctor_Category;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class TypeAdapter extends RecyclerView.Adapter<TypeAdapter.TypeViewHolder> {
     @NonNull
+    public static int selectedIndex = 0;
      ArrayList<Doctor_Category> list;
     private OnCategoryClickLListener onCategoryClickLListener;
     public void setOnCategoryClickLListener(OnCategoryClickLListener onCategoryClickLListener) {
@@ -38,6 +39,12 @@ public class TypeAdapter extends RecyclerView.Adapter<TypeAdapter.TypeViewHolder
     public void onBindViewHolder(@NonNull TypeAdapter.TypeViewHolder holder, int position) {
         Doctor_Category category = list.get(position);
         holder.textViewType.setText(category.getCategoryTitle());
+        if (selectedIndex ==position){
+            holder.strikeThrough.setVisibility(View.VISIBLE);
+        }else{
+            holder.strikeThrough.setVisibility(View.INVISIBLE);
+        }
+
     }
 
     @Override
@@ -47,9 +54,12 @@ public class TypeAdapter extends RecyclerView.Adapter<TypeAdapter.TypeViewHolder
 
       class TypeViewHolder extends RecyclerView.ViewHolder{
         TextView textViewType;
+        ImageView strikeThrough;
         public TypeViewHolder(View itemView) {
+
             super(itemView);
             textViewType = itemView.findViewById(R.id.textViewType);
+            strikeThrough = itemView.findViewById(R.id.strikeThrough);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

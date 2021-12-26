@@ -32,4 +32,43 @@
     <string name="hello">Hello,</string>
     <string name="doctors">Doctors</string>
     <string name="doctorimage">doctorImage</string>
+    <string name="nurse">nurse</string>
+    <string name="doctor_name">Doctor Name:</string>
+    <string name="doctor_type">Doctor Type:</string>
+    <string name="rating">Rating:</string>
+    <string name="instant_appointment">Instant Appointment</string>
+    <string name="details_about_any_information">Details about any information</string>
+    <string name="read_more">Read more</string>
+    <string name="appointment_to_a_doctor">Appointment to a doctor</string>
+    <string name="directions">Directions</string>
+    <string name="recipes">Recipes</string>
+    <string name="new_entry">New Entry</string>
+    <string name="select_time">Select Time</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_doctor_type">Select doctor type:</string>
+    <string name="select_doctor">Select doctor:</string>
+    <string name="add_entry">Add Entry</string>
+    <string name="log_out">Log Out</string>
+    <string name="clear">Clear</string>
+    <string name="about_us">About us</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="contacts">
+        <b>Almaty city</b>\n
+<b>Address:</b> st. Kabanbai batyr 17, block "E"\n
+<b>Tel:</b> +7 (7172) 00-00-00 ext. 171\n
+<b>E-mail:</b> pochta@aaa.kz\n
+<b>Opening hours:</b> Mn-Fr - 09:00-18:00\n</string>
+    <string-array name="category">
+        <item>Psychology</item>
+        <item>Cardiology</item>
+        <item>Gastrology</item>
+        <item>Therapist</item>
+        <item>Surgeon</item>
+        <item>Ophthalmologist</item>
+        <item>Urologist</item>
+        <item>Obstetrician-gynecologist</item>
+    </string-array>
+    <string name="title_activity_about">Map</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.clinicconsultapp">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,13 +18,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ClinicConsultApp">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity
-            android:name=".RegistrationActivity"
-            android:windowSoftInputMode="adjustUnspecified" />
-        <activity android:name=".StartActivity">
 
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".RecipesActivity" />
+        <activity android:name=".DirectionsActivity" />
+        <activity android:name=".DocDetailActivity" />
+        <activity android:name=".NewEntryActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity android:name=".autorithation.LoginActivity" />
+        <activity
+            android:name=".autorithation.RegistrationActivity"
+            android:windowSoftInputMode="adjustUnspecified" />
+        <activity android:name=".autorithation.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
